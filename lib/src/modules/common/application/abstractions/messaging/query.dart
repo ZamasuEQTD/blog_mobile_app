@@ -1,3 +1,0 @@
-mixin IQuery<TResult> {
-
-}
