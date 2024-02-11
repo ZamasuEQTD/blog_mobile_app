@@ -8,9 +8,11 @@ class PortadaDeHilo {
   final BanderasDeHilos banderasDeHilos;
   final EstadoDeHilo estado;
   const PortadaDeHilo(
-      {required this.id,
+      {
+      required this.id,
       required this.titulo,
       required this.categoria,
       required this.banderasDeHilos,
-      required this.estado});
+      required this.estado
+      });
 }

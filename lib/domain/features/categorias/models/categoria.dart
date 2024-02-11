@@ -4,5 +4,5 @@ class Categoria {
   final String nombre;
   final List<Subcategoria> subcategorias;
 
-  Categoria({required this.nombre, required this.subcategorias});
+  const Categoria({required this.nombre, required this.subcategorias});
 }
