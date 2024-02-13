@@ -11,6 +11,8 @@ _$PortadaDeHiloResponseImpl _$$PortadaDeHiloResponseImplFromJson(
     _$PortadaDeHiloResponseImpl(
       id: json['id'] as String,
       titulo: json['titulo'] as String,
+      categoria: json['categoria'] as String,
+      estado: json['estado'] as int,
       imagen: ImagenResponse.fromJson(json['imagen'] as Map<String, dynamic>),
       banderas: BanderasDePortadaDeHiloResponse.fromJson(
           json['banderas'] as Map<String, dynamic>),
@@ -21,6 +23,8 @@ Map<String, dynamic> _$$PortadaDeHiloResponseImplToJson(
     <String, dynamic>{
       'id': instance.id,
       'titulo': instance.titulo,
+      'categoria': instance.categoria,
+      'estado': instance.estado,
       'imagen': instance.imagen,
       'banderas': instance.banderas,
     };

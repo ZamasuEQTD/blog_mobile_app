@@ -1,23 +1,23 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'subcategoria_response.dart';
+part of 'opcion_de_encuesta_response.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SubcategoriaResponseImpl _$$SubcategoriaResponseImplFromJson(
+_$OpcionDeEncuestaResponseImpl _$$OpcionDeEncuestaResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$SubcategoriaResponseImpl(
+    _$OpcionDeEncuestaResponseImpl(
       id: json['id'] as String,
       nombre: json['nombre'] as String,
-      imagen: json['imagen'] as String,
+      votos: json['votos'] as int,
     );
 
-Map<String, dynamic> _$$SubcategoriaResponseImplToJson(
-        _$SubcategoriaResponseImpl instance) =>
+Map<String, dynamic> _$$OpcionDeEncuestaResponseImplToJson(
+        _$OpcionDeEncuestaResponseImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'nombre': instance.nombre,
-      'imagen': instance.imagen,
+      'votos': instance.votos,
     };

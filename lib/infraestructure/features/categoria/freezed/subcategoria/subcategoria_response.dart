@@ -6,6 +6,7 @@ part 'subcategoria_response.g.dart';
 @freezed
 class SubcategoriaResponse with _$SubcategoriaResponse {
   const factory SubcategoriaResponse({
+    required String id,
     required String nombre,
     required String imagen
   }) = _SubcategoriaResponse;

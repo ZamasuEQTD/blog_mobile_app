@@ -10,6 +10,8 @@ class PortadaDeHiloResponse with _$PortadaDeHiloResponse {
   const factory PortadaDeHiloResponse({
     required String id,
     required String titulo,
+    required String categoria,
+    required int estado,
     required ImagenResponse imagen,
     required BanderasDePortadaDeHiloResponse banderas
   }) = _PortadaDeHiloResponse;

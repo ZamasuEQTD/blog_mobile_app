@@ -23,6 +23,8 @@ PortadaDeHiloResponse _$PortadaDeHiloResponseFromJson(
 mixin _$PortadaDeHiloResponse {
   String get id => throw _privateConstructorUsedError;
   String get titulo => throw _privateConstructorUsedError;
+  String get categoria => throw _privateConstructorUsedError;
+  int get estado => throw _privateConstructorUsedError;
   ImagenResponse get imagen => throw _privateConstructorUsedError;
   BanderasDePortadaDeHiloResponse get banderas =>
       throw _privateConstructorUsedError;
@@ -42,6 +44,8 @@ abstract class $PortadaDeHiloResponseCopyWith<$Res> {
   $Res call(
       {String id,
       String titulo,
+      String categoria,
+      int estado,
       ImagenResponse imagen,
       BanderasDePortadaDeHiloResponse banderas});
 
@@ -65,6 +69,8 @@ class _$PortadaDeHiloResponseCopyWithImpl<$Res,
   $Res call({
     Object? id = null,
     Object? titulo = null,
+    Object? categoria = null,
+    Object? estado = null,
     Object? imagen = null,
     Object? banderas = null,
   }) {
@@ -77,6 +83,14 @@ class _$PortadaDeHiloResponseCopyWithImpl<$Res,
           ? _value.titulo
           : titulo // ignore: cast_nullable_to_non_nullable
               as String,
+      categoria: null == categoria
+          ? _value.categoria
+          : categoria // ignore: cast_nullable_to_non_nullable
+              as String,
+      estado: null == estado
+          ? _value.estado
+          : estado // ignore: cast_nullable_to_non_nullable
+              as int,
       imagen: null == imagen
           ? _value.imagen
           : imagen // ignore: cast_nullable_to_non_nullable
@@ -118,6 +132,8 @@ abstract class _$$PortadaDeHiloResponseImplCopyWith<$Res>
   $Res call(
       {String id,
       String titulo,
+      String categoria,
+      int estado,
       ImagenResponse imagen,
       BanderasDePortadaDeHiloResponse banderas});
 
@@ -141,6 +157,8 @@ class __$$PortadaDeHiloResponseImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? titulo = null,
+    Object? categoria = null,
+    Object? estado = null,
     Object? imagen = null,
     Object? banderas = null,
   }) {
@@ -153,6 +171,14 @@ class __$$PortadaDeHiloResponseImplCopyWithImpl<$Res>
           ? _value.titulo
           : titulo // ignore: cast_nullable_to_non_nullable
               as String,
+      categoria: null == categoria
+          ? _value.categoria
+          : categoria // ignore: cast_nullable_to_non_nullable
+              as String,
+      estado: null == estado
+          ? _value.estado
+          : estado // ignore: cast_nullable_to_non_nullable
+              as int,
       imagen: null == imagen
           ? _value.imagen
           : imagen // ignore: cast_nullable_to_non_nullable
@@ -171,6 +197,8 @@ class _$PortadaDeHiloResponseImpl implements _PortadaDeHiloResponse {
   const _$PortadaDeHiloResponseImpl(
       {required this.id,
       required this.titulo,
+      required this.categoria,
+      required this.estado,
       required this.imagen,
       required this.banderas});
 
@@ -182,13 +210,17 @@ class _$PortadaDeHiloResponseImpl implements _PortadaDeHiloResponse {
   @override
   final String titulo;
   @override
+  final String categoria;
+  @override
+  final int estado;
+  @override
   final ImagenResponse imagen;
   @override
   final BanderasDePortadaDeHiloResponse banderas;
 
   @override
   String toString() {
-    return 'PortadaDeHiloResponse(id: $id, titulo: $titulo, imagen: $imagen, banderas: $banderas)';
+    return 'PortadaDeHiloResponse(id: $id, titulo: $titulo, categoria: $categoria, estado: $estado, imagen: $imagen, banderas: $banderas)';
   }
 
   @override
@@ -198,6 +230,9 @@ class _$PortadaDeHiloResponseImpl implements _PortadaDeHiloResponse {
             other is _$PortadaDeHiloResponseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.titulo, titulo) || other.titulo == titulo) &&
+            (identical(other.categoria, categoria) ||
+                other.categoria == categoria) &&
+            (identical(other.estado, estado) || other.estado == estado) &&
             (identical(other.imagen, imagen) || other.imagen == imagen) &&
             (identical(other.banderas, banderas) ||
                 other.banderas == banderas));
@@ -205,7 +240,8 @@ class _$PortadaDeHiloResponseImpl implements _PortadaDeHiloResponse {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, titulo, imagen, banderas);
+  int get hashCode =>
+      Object.hash(runtimeType, id, titulo, categoria, estado, imagen, banderas);
 
   @JsonKey(ignore: true)
   @override
@@ -226,6 +262,8 @@ abstract class _PortadaDeHiloResponse implements PortadaDeHiloResponse {
   const factory _PortadaDeHiloResponse(
           {required final String id,
           required final String titulo,
+          required final String categoria,
+          required final int estado,
           required final ImagenResponse imagen,
           required final BanderasDePortadaDeHiloResponse banderas}) =
       _$PortadaDeHiloResponseImpl;
@@ -237,6 +275,10 @@ abstract class _PortadaDeHiloResponse implements PortadaDeHiloResponse {
   String get id;
   @override
   String get titulo;
+  @override
+  String get categoria;
+  @override
+  int get estado;
   @override
   ImagenResponse get imagen;
   @override

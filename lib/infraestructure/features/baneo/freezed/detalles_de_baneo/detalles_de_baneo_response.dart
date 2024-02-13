@@ -9,6 +9,7 @@ class DetallesDeBaneoResponse with _$DetallesDeBaneoResponse {
     required String id,
     required String moderador,
     required DateTime expiracion,
+    String?  mensaje
   }) = _DetallesDeBaneoResponse;
 
   factory DetallesDeBaneoResponse.fromJson(Map<String, Object?> json)

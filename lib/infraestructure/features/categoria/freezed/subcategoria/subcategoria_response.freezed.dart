@@ -20,6 +20,7 @@ SubcategoriaResponse _$SubcategoriaResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SubcategoriaResponse {
+  String get id => throw _privateConstructorUsedError;
   String get nombre => throw _privateConstructorUsedError;
   String get imagen => throw _privateConstructorUsedError;
 
@@ -35,7 +36,7 @@ abstract class $SubcategoriaResponseCopyWith<$Res> {
           $Res Function(SubcategoriaResponse) then) =
       _$SubcategoriaResponseCopyWithImpl<$Res, SubcategoriaResponse>;
   @useResult
-  $Res call({String nombre, String imagen});
+  $Res call({String id, String nombre, String imagen});
 }
 
 /// @nodoc
@@ -52,10 +53,15 @@ class _$SubcategoriaResponseCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? nombre = null,
     Object? imagen = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       nombre: null == nombre
           ? _value.nombre
           : nombre // ignore: cast_nullable_to_non_nullable
@@ -76,7 +82,7 @@ abstract class _$$SubcategoriaResponseImplCopyWith<$Res>
       __$$SubcategoriaResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String nombre, String imagen});
+  $Res call({String id, String nombre, String imagen});
 }
 
 /// @nodoc
@@ -90,10 +96,15 @@ class __$$SubcategoriaResponseImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? nombre = null,
     Object? imagen = null,
   }) {
     return _then(_$SubcategoriaResponseImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       nombre: null == nombre
           ? _value.nombre
           : nombre // ignore: cast_nullable_to_non_nullable
@@ -110,11 +121,13 @@ class __$$SubcategoriaResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SubcategoriaResponseImpl implements _SubcategoriaResponse {
   const _$SubcategoriaResponseImpl(
-      {required this.nombre, required this.imagen});
+      {required this.id, required this.nombre, required this.imagen});
 
   factory _$SubcategoriaResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$SubcategoriaResponseImplFromJson(json);
 
+  @override
+  final String id;
   @override
   final String nombre;
   @override
@@ -122,7 +135,7 @@ class _$SubcategoriaResponseImpl implements _SubcategoriaResponse {
 
   @override
   String toString() {
-    return 'SubcategoriaResponse(nombre: $nombre, imagen: $imagen)';
+    return 'SubcategoriaResponse(id: $id, nombre: $nombre, imagen: $imagen)';
   }
 
   @override
@@ -130,13 +143,14 @@ class _$SubcategoriaResponseImpl implements _SubcategoriaResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubcategoriaResponseImpl &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.nombre, nombre) || other.nombre == nombre) &&
             (identical(other.imagen, imagen) || other.imagen == imagen));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, nombre, imagen);
+  int get hashCode => Object.hash(runtimeType, id, nombre, imagen);
 
   @JsonKey(ignore: true)
   @override
@@ -156,12 +170,15 @@ class _$SubcategoriaResponseImpl implements _SubcategoriaResponse {
 
 abstract class _SubcategoriaResponse implements SubcategoriaResponse {
   const factory _SubcategoriaResponse(
-      {required final String nombre,
+      {required final String id,
+      required final String nombre,
       required final String imagen}) = _$SubcategoriaResponseImpl;
 
   factory _SubcategoriaResponse.fromJson(Map<String, dynamic> json) =
       _$SubcategoriaResponseImpl.fromJson;
 
+  @override
+  String get id;
   @override
   String get nombre;
   @override

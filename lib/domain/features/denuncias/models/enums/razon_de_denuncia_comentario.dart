@@ -1,0 +1,4 @@
+enum RazonDeDenunciaComentario { 
+  doxxeo, 
+  otro
+}
